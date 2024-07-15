@@ -32,6 +32,7 @@ public class Ex03LocatorUsage {
         WebElement elementByCss = driver.findElement(By.cssSelector("div > p > a"));
         Assert.assertTrue(elementByCss.isDisplayed(), "Link within the div is not displayed!");
 
+
         // Using XPath to find the link by its text
         WebElement elementByXpath = driver.findElement(By.xpath("//a[text()='More information...']"));
         elementByXpath.click();

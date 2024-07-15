@@ -11,6 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+
 /**
  * Ex02ImprovedCode demonstrates the improved setup and execution of a Selenium test with TestNG annotations.
  */
@@ -34,7 +37,7 @@ public class Ex02ImprovedCode {
         driver.get("https://yandex.com/");
 
         // Wait for the page to load fully
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
 
         // Check if the element is present
