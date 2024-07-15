@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Interactions Example</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #droppable {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            left: 200px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="draggable">Drag me</div>
+<div id="droppable">Drop here</div>
+<script>
+    document.getElementById('draggable').ondragstart = function(event) {
+        event.dataTransfer.setData('text/plain', null);
+    };
+</script>
+</body>
+</html>
